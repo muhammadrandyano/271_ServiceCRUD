@@ -8,3 +8,12 @@ const { Pool } = pg;
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Konfigurasi Database
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'mahasiswa',
+    password: 'Admin123', // Sesuaikan dengan password database Anda
+    port: 5432,
+});
